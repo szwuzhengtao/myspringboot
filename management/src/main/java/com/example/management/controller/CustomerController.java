@@ -6,11 +6,7 @@ import com.example.management.service.CustomerService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/customer")
@@ -27,14 +23,14 @@ public class CustomerController {
 
     @PreAuthorize("hasAuthority('添加与修改客户')")
     @PostMapping("/add")
-    public CommonResult addCustomer(Customer customer){
-        return customerService.addCustomer(customer);
+    public CommonResult addCustomer(Customer customer, @RequestHeader("token") String token){
+        return customerService.addCustomer(customer,token);
     }
 
     @PreAuthorize("hasAuthority('删除客户')")
     @PostMapping("/delete")
-    public CommonResult deleteCustomer(int customerId) {
-        return customerService.deleteCustomer(customerId);
+    public CommonResult deleteCustomer(int customerId, @RequestHeader("token") String token) {
+        return customerService.deleteCustomer(customerId,token);
     }
 
     @PreAuthorize("hasAuthority('获取客户信息')")
@@ -45,8 +41,8 @@ public class CustomerController {
 
     @PreAuthorize("hasAuthority('添加与修改客户')")
     @PostMapping("/update")
-    public CommonResult updateCustomer(Customer customer){
-        return customerService.updateCustomer(customer);
+    public CommonResult updateCustomer(Customer customer, @RequestHeader("token") String token){
+        return customerService.updateCustomer(customer,token);
     }
 
 

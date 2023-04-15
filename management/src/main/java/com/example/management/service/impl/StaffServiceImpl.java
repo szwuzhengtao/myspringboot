@@ -64,4 +64,12 @@ public class StaffServiceImpl extends ServiceImpl<StaffMapper, Staff> implements
         staffMapper.updateById(staff);
         return CommonResult.success();
     }
+
+    @Override
+    public CommonResult setActive(String staffId, int isActive) {
+        Staff staff = staffMapper.selectById(staffId);
+        staff.setIsActive(isActive);
+        staffMapper.updateById(staff);
+        return CommonResult.success();
+    }
 }

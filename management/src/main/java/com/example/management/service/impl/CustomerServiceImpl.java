@@ -1,21 +1,39 @@
 package com.example.management.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.management.domain.LoginStaff;
+import com.example.management.mapper.LogMapper;
+import com.example.management.mapper.StaffMapper;
 import com.example.management.pojo.Customer;
 import com.example.management.mapper.CustomerMapper;
+import com.example.management.pojo.Log;
+import com.example.management.pojo.Staff;
 import com.example.management.service.CustomerService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.management.utils.CommonResult;
+import com.example.management.utils.JwtUtil;
+import com.example.management.utils.RedisCache;
+import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> implements CustomerService {
     @Autowired(required = false)
     private CustomerMapper customerMapper;
+
+    @Autowired(required = false)
+    private StaffMapper staffMapper;
+
+    @Autowired(required = false)
+    private LogMapper logMapper;
+
+    @Autowired
+    private RedisCache redisCache;
 
     @Override
     public CommonResult selectAll() {
@@ -24,7 +42,7 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
     }
 
     @Override
-    public CommonResult addCustomer(Customer customer) {
+    public CommonResult addCustomer(Customer customer, String token) {
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("customerEmail",customer.getCustomerEmail());
         if(customerMapper.selectCount(wrapper) > 0){
@@ -33,18 +51,61 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         customer.setCustomerJointime(sdf.format(System.currentTimeMillis()));
         customerMapper.insert(customer);
+        Claims claims = null;
+        String userid = null;
+        try {
+            claims = JwtUtil.parseJWT(token);
+            userid = claims.getSubject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(userid);
+        QueryWrapper wrapper1 = new QueryWrapper();
+        wrapper1.eq("staffAccount",userid);
+        Staff staff = staffMapper.selectOne(wrapper1);
+        Customer customer1 = customerMapper.selectOne(wrapper);
+        Log log = new Log();
+        log.setStaffId(staff.getStaffId());
+        log.setStaffName(staff.getStaffName());
+        log.setCustomerId(customer1.getCustomerId());
+        log.setCustomerName(customer1.getCustomerName());
+        log.setOperation("添加");
+        log.setTime(sdf.format(System.currentTimeMillis()));
+        logMapper.insert(log);
         return CommonResult.success();
     }
 
 
     @Override
-    public CommonResult deleteCustomer(int customerId) {
+    public CommonResult deleteCustomer(int customerId, String token) {
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("customerId",customerId);
         if(customerMapper.selectCount(wrapper) == 0){
             return CommonResult.error(400,"用户不存在");
         }
+        Customer customer = customerMapper.selectOne(wrapper);
         customerMapper.delete(wrapper);
+        Claims claims = null;
+        String userid = null;
+        try {
+            claims = JwtUtil.parseJWT(token);
+            userid = claims.getSubject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(userid);
+        QueryWrapper wrapper1 = new QueryWrapper();
+        wrapper1.eq("staffAccount",userid);
+        Staff staff = staffMapper.selectOne(wrapper1);
+        Log log = new Log();
+        log.setStaffId(staff.getStaffId());
+        log.setStaffName(staff.getStaffName());
+        log.setCustomerId(customer.getCustomerId());
+        log.setCustomerName(customer.getCustomerName());
+        log.setOperation("删除");
+        log.setTime(sdf.format(System.currentTimeMillis()));
+        logMapper.insert(log);
         return CommonResult.success();
     }
 
@@ -60,11 +121,32 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
     }
 
     @Override
-    public CommonResult updateCustomer(Customer customer) {
+    public CommonResult updateCustomer(Customer customer, String token) {
         if(customer == null){
             return CommonResult.error(400,"用户不存在");
         }
         customerMapper.updateById(customer);
+        Claims claims = null;
+        String userid = null;
+        try {
+            claims = JwtUtil.parseJWT(token);
+            userid = claims.getSubject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(userid);
+        QueryWrapper wrapper1 = new QueryWrapper();
+        wrapper1.eq("staffAccount",userid);
+        Staff staff = staffMapper.selectOne(wrapper1);
+        Log log = new Log();
+        log.setStaffId(staff.getStaffId());
+        log.setStaffName(staff.getStaffName());
+        log.setCustomerId(customer.getCustomerId());
+        log.setCustomerName(customer.getCustomerName());
+        log.setOperation("修改");
+        log.setTime(sdf.format(System.currentTimeMillis()));
+        logMapper.insert(log);
         return CommonResult.success();
     }
 }

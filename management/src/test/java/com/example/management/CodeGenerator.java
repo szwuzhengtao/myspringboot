@@ -59,10 +59,10 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/wechat_management?useSSL=false");
+        dsc.setUrl("jdbc:mysql://1.14.150.210:37281/management?useUnicode=true&characterEncoding=UTF-8");
         dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("root");
-        dsc.setPassword("");
+        dsc.setUsername("ruangong");
+        dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
         // 包配置

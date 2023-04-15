@@ -49,6 +49,9 @@ public class Staff implements Serializable {
     @TableField("staffQQ")
     private String staffQQ;
 
+    @TableField("isActive")
+    private Integer isActive;
+
     public String getStaffQQ() {
         return staffQQ;
     }
@@ -139,5 +142,13 @@ public class Staff implements Serializable {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public Integer getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
     }
 }

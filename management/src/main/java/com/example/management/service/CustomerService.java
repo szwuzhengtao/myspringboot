@@ -9,11 +9,11 @@ public interface CustomerService extends IService<Customer> {
 
     CommonResult selectAll();
 
-    CommonResult addCustomer(Customer customer);
+    CommonResult addCustomer(Customer customer, String token);
 
-    CommonResult deleteCustomer(int customerId);
+    CommonResult deleteCustomer(int customerId, String token);
 
     CommonResult selectById(int customerId);
 
-    CommonResult updateCustomer(Customer customer);
+    CommonResult updateCustomer(Customer customer, String token);
 }

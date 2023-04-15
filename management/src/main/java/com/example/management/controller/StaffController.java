@@ -45,5 +45,11 @@ public class StaffController {
     public CommonResult updateStaff(Staff staff){
         return staffService.updateStaff(staff);
     }
+
+    @PreAuthorize("hasAuthority('添加与修改员工')")
+    @PostMapping("/active")
+    public CommonResult setActive(String staffId, int isActive){
+        return staffService.setActive(staffId, isActive);
+    }
 }
 
