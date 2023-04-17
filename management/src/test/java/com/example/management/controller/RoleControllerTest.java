@@ -27,6 +27,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 public class RoleControllerTest {
     @Autowired
     private RoleController roleController;
+    @Autowired(required = false)
     private MockMvc mvc;
     @Autowired
     private WebApplicationContext wac;

@@ -2,10 +2,12 @@ package com.example.management.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.management.domain.LoginStaff;
+import com.example.management.mapper.DeletedMapper;
 import com.example.management.mapper.LogMapper;
 import com.example.management.mapper.StaffMapper;
 import com.example.management.pojo.Customer;
 import com.example.management.mapper.CustomerMapper;
+import com.example.management.pojo.Deleted;
 import com.example.management.pojo.Log;
 import com.example.management.pojo.Staff;
 import com.example.management.service.CustomerService;
@@ -31,6 +33,9 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
 
     @Autowired(required = false)
     private LogMapper logMapper;
+
+    @Autowired(required = false)
+    private DeletedMapper deletedMapper;
 
     @Autowired
     private RedisCache redisCache;
@@ -99,13 +104,28 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
         wrapper1.eq("staffAccount",userid);
         Staff staff = staffMapper.selectOne(wrapper1);
         Log log = new Log();
+        Deleted deleted = new Deleted();
         log.setStaffId(staff.getStaffId());
         log.setStaffName(staff.getStaffName());
         log.setCustomerId(customer.getCustomerId());
         log.setCustomerName(customer.getCustomerName());
         log.setOperation("删除");
         log.setTime(sdf.format(System.currentTimeMillis()));
+        deleted.setCustomerId(customer.getCustomerId());
+        deleted.setCustomerName(customer.getCustomerName());
+        deleted.setCustomerAddress(customer.getCustomerAddress());
+        deleted.setCustomerEmail(customer.getCustomerEmail());
+        deleted.setCustomerGender(customer.getCustomerGender());
+        deleted.setCustomerPhone(customer.getCustomerPhone());
+        deleted.setChargeStaff(customer.getChargeStaff());
+        deleted.setCustomerQQ(customer.getCustomerQQ());
+        deleted.setNickname(customer.getNickname());
+        deleted.setCustomerJointime(customer.getCustomerJointime());
+        deleted.setDeleteTime(sdf.format(System.currentTimeMillis()));
+        deleted.setStaffId(staff.getStaffId());
+        deleted.setStaffName(staff.getStaffName());
         logMapper.insert(log);
+        deletedMapper.insert(deleted);
         return CommonResult.success();
     }
 
