@@ -38,5 +38,11 @@ public class NoticeController {
     public CommonResult myNotice(String staffId){
         return noticeService.myNotice(staffId);
     }
+
+    @PreAuthorize("hasAuthority('获取公告')")
+    @PostMapping("/select")
+    public CommonResult selectNotice(String department){
+        return noticeService.selectNotice(department);
+    }
 }
 

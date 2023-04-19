@@ -1,15 +1,12 @@
 package com.example.management.controller;
 
 
+import com.example.management.dto.RecordIds;
 import com.example.management.service.RecordService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/record")
@@ -40,6 +37,12 @@ public class RecordController {
     @PostMapping("/select/key")
     public CommonResult selectByKey(int chatId, String key){
         return recordService.selectByKey(chatId,key);
+    }
+
+    @PreAuthorize("hasAuthority('聊天记录分块')")
+    @PostMapping("/block")
+    public CommonResult recordBlock(@RequestBody RecordIds recordIds){
+        return recordService.recordBlock(recordIds);
     }
 }
 

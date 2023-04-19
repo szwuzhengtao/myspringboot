@@ -15,9 +15,11 @@ import lombok.experimental.Accessors;
 public class Record implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    @TableId(value = "recordId", type = IdType.AUTO)
+    private Integer recordId;
 
     @TableField("personId")
-    private Integer personId;
+    private String personId;
 
     private String time;
 
@@ -29,4 +31,55 @@ public class Record implements Serializable {
 
     private String content;
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Integer getRecordId() {
+        return recordId;
+    }
+
+    public void setRecordId(Integer recordId) {
+        this.recordId = recordId;
+    }
+
+    public String getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(String personId) {
+        this.personId = personId;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public Integer getChatId() {
+        return chatId;
+    }
+
+    public void setChatId(Integer chatId) {
+        this.chatId = chatId;
+    }
+
+    public String getChatName() {
+        return chatName;
+    }
+
+    public void setChatName(String chatName) {
+        this.chatName = chatName;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

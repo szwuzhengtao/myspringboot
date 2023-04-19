@@ -17,4 +17,6 @@ public interface NoticeService extends IService<Notice> {
     CommonResult addNotice(Notice notice);
 
     CommonResult myNotice(String staffId);
+
+    CommonResult selectNotice(String department);
 }

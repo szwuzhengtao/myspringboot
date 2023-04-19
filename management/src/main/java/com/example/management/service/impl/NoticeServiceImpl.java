@@ -50,4 +50,12 @@ public class NoticeServiceImpl extends ServiceImpl<NoticeMapper, Notice> impleme
         List list = noticeMapper.selectList(wrapper1);
         return CommonResult.success(list);
     }
+
+    @Override
+    public CommonResult selectNotice(String department) {
+        QueryWrapper wrapper = new QueryWrapper();
+        wrapper.eq("department",department);
+        List list = noticeMapper.selectList(wrapper);
+        return CommonResult.success(list);
+    }
 }

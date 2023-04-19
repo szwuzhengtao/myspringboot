@@ -13,7 +13,7 @@ public class LoginController {
     private LoginService loginService;
 
     @RequestMapping("/user/login")
-    public CommonResult login(Staff staff) {
+    public CommonResult login(@RequestBody Staff staff) {
         System.out.println(staff);
         return loginService.login(staff);
     }
