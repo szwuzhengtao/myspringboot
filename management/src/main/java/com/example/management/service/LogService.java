@@ -1,6 +1,6 @@
 package com.example.management.service;
 
-import com.example.management.pojo.Log;
+import com.example.management.pojo.po.Log;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

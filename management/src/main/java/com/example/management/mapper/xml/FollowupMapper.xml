@@ -3,7 +3,7 @@
 <mapper namespace="com.example.management.mapper.FollowupMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.management.pojo.Followup">
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.po.Followup">
         <result column="staffId" property="staffId" />
         <result column="staffName" property="staffName" />
         <result column="customerId" property="customerId" />

@@ -1,7 +1,7 @@
 package com.example.management.controller;
 
 
-import com.example.management.dto.RecordIds;
+import com.example.management.pojo.ro.RecordIds;
 import com.example.management.service.RecordService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;

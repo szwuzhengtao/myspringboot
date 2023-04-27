@@ -3,7 +3,7 @@
 <mapper namespace="com.example.management.mapper.ManuMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.management.pojo.Manu">
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.po.Manu">
         <id column="manuId" property="manuId" />
         <result column="manuName" property="manuName" />
     </resultMap>

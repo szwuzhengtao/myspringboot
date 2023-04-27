@@ -1,6 +1,6 @@
 package com.example.management.service;
 
-import com.example.management.pojo.Recordblock;
+import com.example.management.pojo.po.Recordblock;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

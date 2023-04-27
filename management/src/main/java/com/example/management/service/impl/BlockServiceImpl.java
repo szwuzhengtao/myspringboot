@@ -1,13 +1,13 @@
 package com.example.management.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.example.management.dto.RecordIds;
+import com.example.management.pojo.ro.RecordIds;
 import com.example.management.mapper.RecordMapper;
 import com.example.management.mapper.RecordblockMapper;
-import com.example.management.pojo.Block;
+import com.example.management.pojo.po.Block;
 import com.example.management.mapper.BlockMapper;
-import com.example.management.pojo.Record;
-import com.example.management.pojo.Recordblock;
+import com.example.management.pojo.po.Record;
+import com.example.management.pojo.po.Recordblock;
 import com.example.management.service.BlockService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.management.utils.CommonResult;

@@ -3,7 +3,7 @@
 <mapper namespace="com.example.management.mapper.DeletedMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.management.pojo.Deleted">
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.po.Deleted">
         <id column="customerId" property="customerId" />
         <result column="customerName" property="customerName" />
         <result column="customerEmail" property="customerEmail" />

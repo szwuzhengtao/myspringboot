@@ -3,7 +3,7 @@
 <mapper namespace="com.example.management.mapper.DepartmentMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.management.pojo.Department">
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.po.Department">
         <result column="departmentId" property="departmentId" />
         <result column="departmentName" property="departmentName" />
     </resultMap>

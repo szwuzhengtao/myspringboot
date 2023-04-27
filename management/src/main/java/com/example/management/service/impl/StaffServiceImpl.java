@@ -1,8 +1,7 @@
 package com.example.management.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.example.management.pojo.Staff;
+import com.example.management.pojo.po.Staff;
 import com.example.management.mapper.StaffMapper;
 import com.example.management.service.StaffService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

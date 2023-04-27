@@ -1,7 +1,7 @@
 package com.example.management;
 
 import com.example.management.mapper.CustomerMapper;
-import com.example.management.pojo.Customer;
+import com.example.management.pojo.po.Customer;
 import com.example.management.utils.RedisCache;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

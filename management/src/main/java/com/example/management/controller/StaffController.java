@@ -1,7 +1,7 @@
 package com.example.management.controller;
 
 
-import com.example.management.pojo.Staff;
+import com.example.management.pojo.po.Staff;
 import com.example.management.service.StaffService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;

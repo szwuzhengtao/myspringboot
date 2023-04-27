@@ -1,10 +1,8 @@
 package com.example.management.mapper;
 
-import com.example.management.pojo.Block;
+import com.example.management.pojo.po.Block;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Select;
-
-import java.util.List;
 
 /**
  * <p>

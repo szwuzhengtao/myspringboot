@@ -1,7 +1,7 @@
 package com.example.management.controller;
 
 
-import com.example.management.pojo.Deleted;
+import com.example.management.pojo.po.Deleted;
 import com.example.management.service.DeletedService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;

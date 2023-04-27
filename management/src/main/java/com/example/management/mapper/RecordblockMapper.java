@@ -1,6 +1,6 @@
 package com.example.management.mapper;
 
-import com.example.management.pojo.Recordblock;
+import com.example.management.pojo.po.Recordblock;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Select;
 

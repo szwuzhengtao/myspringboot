@@ -3,7 +3,7 @@
 <mapper namespace="com.example.management.mapper.RecordblockMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.management.pojo.Recordblock">
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.po.Recordblock">
         <id column="blockId" property="blockId" />
         <result column="customerId" property="customerId" />
         <result column="staffId" property="staffId" />

@@ -1,7 +1,7 @@
 package com.example.management.controller;
 
 
-import com.example.management.pojo.Followup;
+import com.example.management.pojo.po.Followup;
 import com.example.management.service.FollowupService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;

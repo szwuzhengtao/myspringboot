@@ -3,15 +3,16 @@ package com.example.management.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.management.mapper.RoleMapper;
 import com.example.management.mapper.StaffMapper;
-import com.example.management.pojo.*;
 import com.example.management.mapper.StaffRoleMapper;
+import com.example.management.pojo.po.Role;
+import com.example.management.pojo.po.Staff;
+import com.example.management.pojo.po.StaffRole;
 import com.example.management.service.StaffRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.management.Query;
 import java.util.List;
 import java.util.Objects;
 

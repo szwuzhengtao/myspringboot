@@ -1,6 +1,6 @@
 package com.example.management.mapper;
 
-import com.example.management.pojo.Followup;
+import com.example.management.pojo.po.Followup;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

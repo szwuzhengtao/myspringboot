@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.management.mapper.ManuMapper;
 import com.example.management.mapper.StaffMapper;
 import com.example.management.domain.LoginStaff;
-import com.example.management.pojo.Staff;
+import com.example.management.pojo.po.Staff;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,9 +13,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 

@@ -1,7 +1,7 @@
 package com.example.management.service;
 
-import com.example.management.dto.RecordIds;
-import com.example.management.pojo.Record;
+import com.example.management.pojo.ro.RecordIds;
+import com.example.management.pojo.po.Record;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.management.utils.CommonResult;
 

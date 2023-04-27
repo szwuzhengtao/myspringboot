@@ -1,6 +1,6 @@
 package com.example.management.mapper;
 
-import com.example.management.pojo.Deleted;
+import com.example.management.pojo.po.Deleted;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

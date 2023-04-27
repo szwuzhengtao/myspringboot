@@ -3,18 +3,16 @@ package com.example.management.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.management.mapper.CustomerMapper;
 import com.example.management.mapper.LogMapper;
-import com.example.management.pojo.Customer;
-import com.example.management.pojo.Deleted;
+import com.example.management.pojo.po.Customer;
+import com.example.management.pojo.po.Deleted;
 import com.example.management.mapper.DeletedMapper;
-import com.example.management.pojo.Log;
+import com.example.management.pojo.po.Log;
 import com.example.management.service.DeletedService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.management.Query;
-import java.nio.file.Watchable;
 import java.text.SimpleDateFormat;
 import java.util.List;
 

@@ -3,7 +3,7 @@
 <mapper namespace="com.example.management.mapper.ConnectionMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.management.pojo.Connection">
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.po.Connection">
         <id column="staffId" property="staffId" />
         <result column="customerId" property="customerId" />
     </resultMap>

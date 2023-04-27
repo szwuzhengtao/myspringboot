@@ -1,6 +1,6 @@
 package com.example.management.mapper;
 
-import com.example.management.pojo.Role;
+import com.example.management.pojo.po.Role;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

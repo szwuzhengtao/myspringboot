@@ -1,7 +1,7 @@
 package com.example.management.service.impl;
 
 import com.example.management.domain.LoginStaff;
-import com.example.management.pojo.Staff;
+import com.example.management.pojo.po.Staff;
 import com.example.management.service.LoginService;
 import com.example.management.utils.CommonResult;
 import com.example.management.utils.JwtUtil;

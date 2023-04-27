@@ -2,9 +2,9 @@ package com.example.management.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.management.mapper.StaffMapper;
-import com.example.management.pojo.Notice;
+import com.example.management.pojo.po.Notice;
 import com.example.management.mapper.NoticeMapper;
-import com.example.management.pojo.Staff;
+import com.example.management.pojo.po.Staff;
 import com.example.management.service.NoticeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.management.utils.CommonResult;

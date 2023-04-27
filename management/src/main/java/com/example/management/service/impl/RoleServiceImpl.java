@@ -1,7 +1,7 @@
 package com.example.management.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.example.management.pojo.Role;
+import com.example.management.pojo.po.Role;
 import com.example.management.mapper.RoleMapper;
 import com.example.management.service.RoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

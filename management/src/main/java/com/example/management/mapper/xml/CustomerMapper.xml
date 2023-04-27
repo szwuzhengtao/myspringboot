@@ -3,7 +3,7 @@
 <mapper namespace="com.example.management.mapper.CustomerMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.management.pojo.Customer">
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.po.Customer">
         <id column="customerId" property="customerId" />
         <result column="customerName" property="customerName" />
         <result column="customerEmail" property="customerEmail" />
@@ -20,7 +20,7 @@
         customerId, customerName, customerEmail, customerGender, customerAddress, customerPhone, customerJob, customerJointime, chargeStaff
     </sql>
 
-    <select id="selectMyCustomer" resultType="com.example.management.pojo.Customer">
+    <select id="selectMyCustomer" resultType="com.example.management.pojo.po.Customer">
         select * from customer where customerId = #{customerId}
     </select>
 

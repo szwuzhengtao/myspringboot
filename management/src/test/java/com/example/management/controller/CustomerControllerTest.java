@@ -1,22 +1,18 @@
 package com.example.management.controller;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.management.mapper.CustomerMapper;
 import com.example.management.mapper.LogMapper;
-import com.example.management.pojo.Customer;
+import com.example.management.pojo.po.Customer;
 import com.example.management.service.CustomerService;
 import com.example.management.utils.CommonResult;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.annotation.Rollback;
@@ -28,11 +24,8 @@ import org.springframework.web.context.WebApplicationContext;
 
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest

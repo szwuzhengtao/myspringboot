@@ -1,6 +1,6 @@
 package com.example.management.service.impl;
 
-import com.example.management.pojo.Recordblock;
+import com.example.management.pojo.po.Recordblock;
 import com.example.management.mapper.RecordblockMapper;
 import com.example.management.service.RecordblockService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -1,7 +1,7 @@
 package com.example.management.controller;
 
 
-import com.example.management.pojo.RoleManu;
+import com.example.management.pojo.po.RoleManu;
 import com.example.management.service.RoleManuService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;

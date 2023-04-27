@@ -3,7 +3,7 @@
 <mapper namespace="com.example.management.mapper.RecordMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.management.pojo.Record">
+    <resultMap id="BaseResultMap" type="com.example.management.pojo.po.Record">
         <result column="personId" property="personId" />
         <result column="time" property="time" />
         <result column="chatId" property="chatId" />
