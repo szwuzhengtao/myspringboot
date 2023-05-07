@@ -23,32 +23,32 @@ public class StaffController {
 
     @PreAuthorize("hasAuthority('获取员工信息')")
     @PostMapping("/select/department")
-    public CommonResult selectByDepartment(String departmentName){
+    public CommonResult selectByDepartment(@RequestBody String departmentName){
         return staffService.selectByDepartment(departmentName);
     }
 
     @PreAuthorize("hasAuthority('获取员工信息')")
     @PostMapping("/select/job")
-    public CommonResult selectByJob(Staff staff){
+    public CommonResult selectByJob(@RequestBody Staff staff){
         System.out.println(staff);
         return staffService.selectByJob(staff);
     }
 
     @PreAuthorize("hasAuthority('添加与修改员工')")
     @PostMapping("/account")
-    public CommonResult setAccount(Staff staff){
+    public CommonResult setAccount(@RequestBody Staff staff){
         return staffService.setAccount(staff);
     }
 
     @PreAuthorize("hasAuthority('添加与修改员工')")
     @PostMapping("/update")
-    public CommonResult updateStaff(Staff staff){
+    public CommonResult updateStaff(@RequestBody Staff staff){
         return staffService.updateStaff(staff);
     }
 
     @PreAuthorize("hasAuthority('添加与修改员工')")
     @PostMapping("/active")
-    public CommonResult setActive(String staffId, int isActive){
+    public CommonResult setActive(@RequestBody String staffId, int isActive){
         return staffService.setActive(staffId, isActive);
     }
 }

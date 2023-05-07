@@ -6,11 +6,7 @@ import com.example.management.service.RoleManuService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -29,19 +25,19 @@ public class RoleManuController {
 
     @PreAuthorize("hasAuthority('设置权限')")
     @PostMapping("/add")
-    public CommonResult setRoleManu(int roleId, int manuId){
+    public CommonResult setRoleManu(@RequestBody int roleId, int manuId){
         return roleManuService.setRoleManu(roleId,manuId);
     }
 
     @PreAuthorize("hasAuthority('设置权限')")
     @PostMapping("/select")
-    public CommonResult selectRoleManu(String roleId){
+    public CommonResult selectRoleManu(@RequestBody String roleId){
         return roleManuService.selectRoleManu(roleId);
     }
 
     @PreAuthorize("hasAuthority('设置权限')")
     @PostMapping("/delete")
-    public CommonResult deleteRoleManu(RoleManu roleManu){
+    public CommonResult deleteRoleManu(@RequestBody RoleManu roleManu){
         return roleManuService.deleteRoleManu(roleManu);
     }
 }

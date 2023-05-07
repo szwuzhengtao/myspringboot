@@ -6,11 +6,7 @@ import com.example.management.service.DeletedService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -29,13 +25,13 @@ public class DeletedController {
 
     @PreAuthorize("hasAuthority('恢复删除')")
     @PostMapping("/restore")
-    public CommonResult restore(Deleted deleted){
+    public CommonResult restore(@RequestBody Deleted deleted){
         return deletedService.restore(deleted);
     }
 
     @PreAuthorize("hasAuthority('删除客户')")
     @PostMapping("/all")
-    public CommonResult allDelete(String staffId){
+    public CommonResult allDelete(@RequestBody String staffId){
         return deletedService.allDelete(staffId);
     }
 }

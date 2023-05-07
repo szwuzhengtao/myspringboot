@@ -8,6 +8,8 @@ import java.util.List;
 public class RecordIds {
     private List<Integer> recordIds;
     private Integer staffId;
+    private Integer customerId;
+    private String title;
     private String note;
 
     public List<Integer> getRecordIds() {
@@ -32,5 +34,21 @@ public class RecordIds {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public Integer getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Integer customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

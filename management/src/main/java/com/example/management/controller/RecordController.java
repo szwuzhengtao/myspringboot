@@ -23,19 +23,19 @@ public class RecordController {
 
     @PreAuthorize("hasAnyAuthority('查找聊天记录')")
     @PostMapping("/select/customer")
-    public CommonResult selectById(int personId){
+    public CommonResult selectById(@RequestBody int personId){
         return recordService.selectById(personId);
     }
 
     @PreAuthorize("hasAnyAuthority('查找聊天记录')")
     @PostMapping("/select/chat")
-    public CommonResult selectByChatId(int chatId){
+    public CommonResult selectByChatId(@RequestBody int chatId){
         return recordService.selectByChatId(chatId);
     }
 
     @PreAuthorize("hasAuthority('查找聊天记录')")
     @PostMapping("/select/key")
-    public CommonResult selectByKey(int chatId, String key){
+    public CommonResult selectByKey(@RequestBody int chatId, String key){
         return recordService.selectByKey(chatId,key);
     }
 

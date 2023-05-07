@@ -41,4 +41,9 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
         List<Role> roles = roleMapper.selectList(null);
         return CommonResult.success(roles);
     }
+
+    @Override
+    public CommonResult selectRole(int staffId) {
+        return null;
+    }
 }

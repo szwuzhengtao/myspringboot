@@ -31,6 +31,9 @@ public class Notice implements Serializable {
     @TableField("staffId")
     private Integer staffId;
 
+    @TableField("title")
+    private String title;
+
     private String content;
 
     private String time;
@@ -79,5 +82,13 @@ public class Notice implements Serializable {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

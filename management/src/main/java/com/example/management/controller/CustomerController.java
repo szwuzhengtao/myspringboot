@@ -23,25 +23,25 @@ public class CustomerController {
 
     @PreAuthorize("hasAuthority('添加与修改客户')")
     @PostMapping("/add")
-    public CommonResult addCustomer(Customer customer, @RequestHeader("token") String token){
+    public CommonResult addCustomer(@RequestBody Customer customer, @RequestHeader("token") String token){
         return customerService.addCustomer(customer,token);
     }
 
     @PreAuthorize("hasAuthority('删除客户')")
     @PostMapping("/delete")
-    public CommonResult deleteCustomer(int customerId, @RequestHeader("token") String token) {
+    public CommonResult deleteCustomer(@RequestBody int customerId, @RequestHeader("token") String token) {
         return customerService.deleteCustomer(customerId,token);
     }
 
     @PreAuthorize("hasAuthority('获取客户信息')")
     @PostMapping("/select/id")
-    public CommonResult selectById(int customerId){
+    public CommonResult selectById(@RequestBody int customerId){
         return customerService.selectById(customerId);
     }
 
     @PreAuthorize("hasAuthority('添加与修改客户')")
     @PostMapping("/update")
-    public CommonResult updateCustomer(Customer customer, @RequestHeader("token") String token){
+    public CommonResult updateCustomer(@RequestBody Customer customer, @RequestHeader("token") String token){
         return customerService.updateCustomer(customer,token);
     }
 

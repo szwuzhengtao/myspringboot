@@ -17,4 +17,6 @@ public interface RoleService extends IService<Role> {
     CommonResult newRole(Role role);
 
     CommonResult allRole();
+
+    CommonResult selectRole(int staffId);
 }

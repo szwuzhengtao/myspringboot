@@ -31,13 +31,13 @@ public class BlockController {
 
     @PreAuthorize("hasAuthority('查找聊天记录')")
     @PostMapping("/select/person")
-    public CommonResult selectCustomerBlock(String personId){
+    public CommonResult selectCustomerBlock(@RequestBody String personId){
         return blockService.selectCustomerBlock(personId);
     }
 
     @PreAuthorize("hasAuthority('查找聊天记录')")
     @PostMapping("/details")
-    public CommonResult blockDetails(Integer blockId){
+    public CommonResult blockDetails(@RequestBody Integer blockId){
         return blockService.blockDetails(blockId);
     }
 }

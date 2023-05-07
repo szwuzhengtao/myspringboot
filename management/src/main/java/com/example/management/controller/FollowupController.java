@@ -6,11 +6,7 @@ import com.example.management.service.FollowupService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -29,7 +25,7 @@ public class FollowupController {
 
     @PreAuthorize("hasAuthority('联系跟进')")
     @PostMapping("/add")
-    public CommonResult addFollowup(Followup followup){
+    public CommonResult addFollowup(@RequestBody Followup followup){
         return followupService.addFollowup(followup);
     }
 
@@ -41,13 +37,13 @@ public class FollowupController {
 
     @PreAuthorize("hasAuthority('联系跟进')")
     @PostMapping("/customer")
-    public CommonResult selectCustomerFollowup(String customerId){
+    public CommonResult selectCustomerFollowup(@RequestBody String customerId){
         return followupService.selectCustomerFollowup(customerId);
     }
 
     @PreAuthorize("hasAuthority('联系跟进')")
     @PostMapping("/staff")
-    public CommonResult selectStaffFollowup(String staffId){
+    public CommonResult selectStaffFollowup(@RequestBody String staffId){
         return followupService.selectStaffFollowup(staffId);
     }
 }

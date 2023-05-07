@@ -49,6 +49,12 @@ public class LoginServiceImpl implements LoginService {
             map.put("staffName",loginStaff.getStaff().getStaffName().toString());
         }
         map.put("token",jwt);
+        if(loginStaff.getStaff().getStaffJob().toString().equals("管理员")){
+            map.put("admin","yes");
+        }
+        else{
+            map.put("admin","no");
+        }
         redisCache.setCacheObject("login" + staffAccount,loginStaff);
         return CommonResult.success(map);
     }

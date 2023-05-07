@@ -37,6 +37,9 @@ public class StaffRole implements Serializable {
     @TableField("roleName")
     private String roleName;
 
+    public StaffRole() {
+    }
+
     public StaffRole(Integer staffId, Integer roleId) {
         this.staffId = staffId;
         this.roleId = roleId;

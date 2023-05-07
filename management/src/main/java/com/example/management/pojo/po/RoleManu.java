@@ -36,6 +36,9 @@ public class RoleManu implements Serializable {
     @TableField("manuName")
     private String tableName;
 
+    public RoleManu() {
+    }
+
     public RoleManu(Integer roleId, Integer manuId) {
         this.roleId = roleId;
         this.manuId = manuId;

@@ -6,11 +6,7 @@ import com.example.management.service.RoleService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -29,7 +25,7 @@ public class RoleController {
 
     @PreAuthorize("hasAuthority('设置权限')")
     @PostMapping("/add")
-    public CommonResult newRole(Role role){
+    public CommonResult newRole(@RequestBody Role role){
         return roleService.newRole(role);
     }
 
@@ -37,6 +33,12 @@ public class RoleController {
     @PostMapping("/all")
     public CommonResult allRole(){
         return roleService.allRole();
+    }
+
+    @PreAuthorize("hasAuthority('设置权限')")
+    @PostMapping("/select")
+    public CommonResult selectRole(@RequestBody int staffId){
+        return roleService.selectRole(staffId);
     }
 }
 

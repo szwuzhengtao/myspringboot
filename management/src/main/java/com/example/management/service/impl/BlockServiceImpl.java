@@ -38,7 +38,7 @@ public class BlockServiceImpl extends ServiceImpl<BlockMapper, Block> implements
 
     @Override
     public CommonResult recordBlock(@RequestBody RecordIds recordIds) {
-        Block block = new Block(recordIds.getStaffId(),recordIds.getNote());
+        Block block = new Block(recordIds.getStaffId(),recordIds.getCustomerId(),recordIds.getTitle(),recordIds.getNote());
         System.out.println("blockId:" + block.getBlockId());
         blockMapper.insert(block);
         Integer blockId = blockMapper.selectMax();

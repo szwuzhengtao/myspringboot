@@ -6,11 +6,7 @@ import com.example.management.service.NoticeService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -29,19 +25,19 @@ public class NoticeController {
 
     @PreAuthorize("hasAuthority('发布公告')")
     @PostMapping("/add")
-    public CommonResult addNotice(Notice notice){
+    public CommonResult addNotice(@RequestBody Notice notice){
         return noticeService.addNotice(notice);
     }
 
     @PreAuthorize("hasAnyAuthority('获取公告')")
     @PostMapping("/my")
-    public CommonResult myNotice(String staffId){
+    public CommonResult myNotice(@RequestBody String staffId){
         return noticeService.myNotice(staffId);
     }
 
     @PreAuthorize("hasAuthority('获取公告')")
     @PostMapping("/select")
-    public CommonResult selectNotice(String department){
+    public CommonResult selectNotice(@RequestBody String department){
         return noticeService.selectNotice(department);
     }
 }
