@@ -12,6 +12,17 @@ public class RecordIds {
     private String title;
     private String note;
 
+    public RecordIds() {
+    }
+
+    public RecordIds(List<Integer> recordIds, Integer staffId, Integer customerId, String title, String note) {
+        this.recordIds = recordIds;
+        this.staffId = staffId;
+        this.customerId = customerId;
+        this.title = title;
+        this.note = note;
+    }
+
     public List<Integer> getRecordIds() {
         return recordIds;
     }

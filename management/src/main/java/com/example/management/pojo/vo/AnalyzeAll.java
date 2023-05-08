@@ -11,6 +11,19 @@ public class AnalyzeAll {
     private Integer[] followups;
     private Integer otherNum;
 
+    public AnalyzeAll() {
+
+    }
+
+    public AnalyzeAll(Integer customerNum, Integer staffNum, Integer followupNum, Integer chatNum, Integer[] followups, Integer otherNum) {
+        this.customerNum = customerNum;
+        this.staffNum = staffNum;
+        this.followupNum = followupNum;
+        this.chatNum = chatNum;
+        this.followups = followups;
+        this.otherNum = otherNum;
+    }
+
     public Integer getCustomerNum() {
         return customerNum;
     }

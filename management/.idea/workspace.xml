@@ -24,76 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d048aaf2-ef1e-4536-9477-987d50e79bd3" name="默认的" comment="解决了ChatController的NPL异常，原因是selectAll方法为私有导致spring无法调用">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/BlockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/BlockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/DeletedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/DeletedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/FollowupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/FollowupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/NoticeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RecordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RoleManuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RoleManuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/StaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/StaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/StaffRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/StaffRoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/Notice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/RoleManu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/RoleManu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/StaffRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/StaffRole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/ro/RecordIds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/ro/RecordIds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/BlockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/BlockServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/DeletedServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/DeletedServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/management/controller/CustomerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/management/controller/CustomerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/vo/AnalyzeAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/vo/AnalyzeAll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/management/controller/DeletedControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/management/controller/DeletedControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/management/controller/FollowupControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/management/controller/FollowupControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/management/controller/ManuControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/management/controller/ManuControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/management/controller/NoticeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/management/controller/NoticeControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/management/controller/RoleControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/management/controller/RoleControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/management/controller/StaffControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/management/controller/StaffControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/BlockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/BlockController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/DeletedController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/DeletedController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/FollowupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/FollowupController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/NoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/NoticeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/RecordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/RoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/RoleManuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/RoleManuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/StaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/StaffController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/StaffRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/StaffRoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/Block.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/Notice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/Notice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/RoleManu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/RoleManu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/StaffRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/StaffRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/pojo/ro/RecordIds.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/pojo/ro/RecordIds.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/RoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/AnalyzeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/AnalyzeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/BlockServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/BlockServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/RoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/management-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/management-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/management-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/management-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.AuthorityTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.AuthorityTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.ManagementApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.ManagementApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.controller.RoleControllerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.mapper.MapperTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.management.mapper.MapperTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.management.AuthorityTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.management.AuthorityTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.management.ManagementApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.management.ManagementApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.management.controller.RoleControllerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.management.mapper.MapperTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.management.mapper.MapperTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/management/controller/ChatControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/management/controller/CustomerControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/management/controller/DeletedControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/management/controller/FollowupControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/management/controller/ManuControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/management/controller/NoticeControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/management/controller/RoleControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/management/controller/StaffControllerTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -346,7 +280,10 @@
       <workItem from="1683454601572" duration="1147000" />
       <workItem from="1683456527692" duration="4459000" />
       <workItem from="1683467510347" duration="1648000" />
-      <workItem from="1683473866894" duration="6930000" />
+      <workItem from="1683473866894" duration="7190000" />
+      <workItem from="1683482598210" duration="19000" />
+      <workItem from="1683482650195" duration="60000" />
+      <workItem from="1683509226027" duration="1915000" />
     </task>
     <servers />
   </component>
@@ -374,10 +311,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1680334302206" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1683481578428">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1683510602673">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1683481578428" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1683510602673" />
     <state x="417" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1681651509575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -390,38 +327,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1682237834786" />
-    <state width="1493" height="250" key="GridCell.Tab.0.bottom" timestamp="1683463343301">
+    <state width="1493" height="279" key="GridCell.Tab.0.bottom" timestamp="1683482547981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1683463343301" />
-    <state width="1493" height="250" key="GridCell.Tab.0.center" timestamp="1683463343301">
+    <state width="1493" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
+    <state width="1493" height="279" key="GridCell.Tab.0.center" timestamp="1683482547981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1683463343301" />
-    <state width="1493" height="250" key="GridCell.Tab.0.left" timestamp="1683463343301">
+    <state width="1493" height="279" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
+    <state width="1493" height="279" key="GridCell.Tab.0.left" timestamp="1683482547981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1683463343301" />
-    <state width="1493" height="250" key="GridCell.Tab.0.right" timestamp="1683463343301">
+    <state width="1493" height="279" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
+    <state width="1493" height="279" key="GridCell.Tab.0.right" timestamp="1683482547981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1683463343301" />
-    <state width="1493" height="250" key="GridCell.Tab.1.bottom" timestamp="1683462987566">
+    <state width="1493" height="279" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
+    <state width="1493" height="279" key="GridCell.Tab.1.bottom" timestamp="1683482547982">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1683462987566" />
-    <state width="1493" height="250" key="GridCell.Tab.1.center" timestamp="1683462987566">
+    <state width="1493" height="279" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1683482547982" />
+    <state width="1493" height="279" key="GridCell.Tab.1.center" timestamp="1683482547981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1683462987566" />
-    <state width="1493" height="250" key="GridCell.Tab.1.left" timestamp="1683462987566">
+    <state width="1493" height="279" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
+    <state width="1493" height="279" key="GridCell.Tab.1.left" timestamp="1683482547981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1683462987566" />
-    <state width="1493" height="250" key="GridCell.Tab.1.right" timestamp="1683462987566">
+    <state width="1493" height="279" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
+    <state width="1493" height="279" key="GridCell.Tab.1.right" timestamp="1683482547981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="250" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1683462987566" />
+    <state width="1493" height="279" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
     <state x="270" y="57" key="SettingsEditor" timestamp="1679984843942">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
