@@ -23,11 +23,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d048aaf2-ef1e-4536-9477-987d50e79bd3" name="默认的" comment="解决了ChatController的NPL异常，原因是selectAll方法为私有导致spring无法调用">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_huaban_jieba_analysis_1_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/management.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/ro/RecordIds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/ro/RecordIds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/vo/AnalyzeAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/vo/AnalyzeAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/management/controller/DeletedControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/management/controller/DeletedControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/management/controller/NoticeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/management/controller/NoticeControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RoleManuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/controller/RoleManuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/mapper/RoleManuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/mapper/RoleManuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/Manu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/Manu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/RoleManu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/RoleManu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/ro/RoleManus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/ro/RoleManus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/RecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/RoleManuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/RoleManuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/ManuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/ManuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/RecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/RecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/RoleManuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/RoleManuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/utils/MyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/utils/MyConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/RecordController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/controller/RoleManuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/controller/RoleManuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/mapper/RoleManuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/mapper/RoleManuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/Manu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/Manu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/RoleManu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/pojo/po/RoleManu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/pojo/ro/RecordIds.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/pojo/ro/RecordIds.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/pojo/vo/AnalyzeAll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/pojo/vo/AnalyzeAll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/RecordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/RoleManuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/RoleManuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/ManuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/ManuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/RecordServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/RecordServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/RoleManuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/management/service/impl/RoleManuServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,9 +104,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tvue/wehat03.31" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.last.edited" value="全局库" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -109,17 +135,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -283,7 +298,22 @@
       <workItem from="1683473866894" duration="7190000" />
       <workItem from="1683482598210" duration="19000" />
       <workItem from="1683482650195" duration="60000" />
-      <workItem from="1683509226027" duration="1915000" />
+      <workItem from="1683509226027" duration="5557000" />
+      <workItem from="1683551736300" duration="404000" />
+      <workItem from="1683592907019" duration="1609000" />
+      <workItem from="1683594570500" duration="1874000" />
+      <workItem from="1683613907208" duration="1493000" />
+      <workItem from="1683619877673" duration="2937000" />
+      <workItem from="1683972290727" duration="6709000" />
+      <workItem from="1684069817329" duration="4840000" />
+      <workItem from="1684114227270" duration="2448000" />
+      <workItem from="1684226217482" duration="2489000" />
+      <workItem from="1684286325678" duration="58000" />
+      <workItem from="1684286419176" duration="1380000" />
+      <workItem from="1684407892762" duration="29000" />
+      <workItem from="1684407953773" duration="63000" />
+      <workItem from="1684408086535" duration="687000" />
+      <workItem from="1684409823360" duration="2065000" />
     </task>
     <servers />
   </component>
@@ -311,58 +341,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1680334302206" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1683510602673">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1684069923657">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1683510602673" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1684069923657" />
     <state x="417" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1681651509575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="417" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1681651509575" />
-    <state x="539" y="279" width="458" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1681874875981">
+    <state x="539" y="279" width="458" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1683620318057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="539" y="279" width="458" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1681874875981" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1682237834786">
+    <state x="539" y="279" width="458" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1683620318057" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1683512406982">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1682237834786" />
-    <state width="1493" height="279" key="GridCell.Tab.0.bottom" timestamp="1683482547981">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1683512406982" />
+    <state width="1493" height="281" key="GridCell.Tab.0.bottom" timestamp="1684412097218">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
-    <state width="1493" height="279" key="GridCell.Tab.0.center" timestamp="1683482547981">
+    <state width="1493" height="281" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1684412097218" />
+    <state width="1493" height="281" key="GridCell.Tab.0.center" timestamp="1684412097217">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
-    <state width="1493" height="279" key="GridCell.Tab.0.left" timestamp="1683482547981">
+    <state width="1493" height="281" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1684412097217" />
+    <state width="1493" height="281" key="GridCell.Tab.0.left" timestamp="1684412097217">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
-    <state width="1493" height="279" key="GridCell.Tab.0.right" timestamp="1683482547981">
+    <state width="1493" height="281" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1684412097217" />
+    <state width="1493" height="281" key="GridCell.Tab.0.right" timestamp="1684412097218">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
-    <state width="1493" height="279" key="GridCell.Tab.1.bottom" timestamp="1683482547982">
+    <state width="1493" height="281" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1684412097218" />
+    <state width="1493" height="281" key="GridCell.Tab.1.bottom" timestamp="1684412097218">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1683482547982" />
-    <state width="1493" height="279" key="GridCell.Tab.1.center" timestamp="1683482547981">
+    <state width="1493" height="281" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1684412097218" />
+    <state width="1493" height="281" key="GridCell.Tab.1.center" timestamp="1684412097218">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
-    <state width="1493" height="279" key="GridCell.Tab.1.left" timestamp="1683482547981">
+    <state width="1493" height="281" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1684412097218" />
+    <state width="1493" height="281" key="GridCell.Tab.1.left" timestamp="1684412097218">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
-    <state width="1493" height="279" key="GridCell.Tab.1.right" timestamp="1683482547981">
+    <state width="1493" height="281" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1684412097218" />
+    <state width="1493" height="281" key="GridCell.Tab.1.right" timestamp="1684412097218">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1683482547981" />
-    <state x="270" y="57" key="SettingsEditor" timestamp="1679984843942">
+    <state width="1493" height="281" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1684412097218" />
+    <state x="270" y="0" key="SettingsEditor" timestamp="1683594495339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1679984843942" />
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1683594495339" />
     <state x="582" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1681695255572">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

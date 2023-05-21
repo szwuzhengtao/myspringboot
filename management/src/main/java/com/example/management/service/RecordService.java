@@ -16,4 +16,6 @@ public interface RecordService extends IService<Record> {
     CommonResult selectByKey(int chatId, String key);
 
     CommonResult recordBlock(RecordIds recordIds);
+
+    CommonResult keyWords(String personId);
 }

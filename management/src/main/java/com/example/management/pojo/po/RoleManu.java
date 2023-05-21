@@ -34,7 +34,10 @@ public class RoleManu implements Serializable {
     private Integer manuId;
 
     @TableField("manuName")
-    private String tableName;
+    private String manuName;
+
+    @TableField("state")
+    private Integer state;
 
     public RoleManu() {
     }
@@ -44,11 +47,11 @@ public class RoleManu implements Serializable {
         this.manuId = manuId;
     }
 
-    public RoleManu(Integer roleId, String roleName, Integer manuId, String tableName) {
+    public RoleManu(Integer roleId, String roleName, Integer manuId, String manuName) {
         this.roleId = roleId;
         this.roleName = roleName;
         this.manuId = manuId;
-        this.tableName = tableName;
+        this.manuName = manuName;
     }
 
     public static long getSerialVersionUID() {
@@ -79,11 +82,4 @@ public class RoleManu implements Serializable {
         this.manuId = manuId;
     }
 
-    public String getTableName() {
-        return tableName;
-    }
-
-    public void setTableName(String tableName) {
-        this.tableName = tableName;
-    }
 }

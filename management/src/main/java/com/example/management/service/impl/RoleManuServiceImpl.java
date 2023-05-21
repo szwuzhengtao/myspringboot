@@ -7,6 +7,7 @@ import com.example.management.pojo.po.Manu;
 import com.example.management.pojo.po.Role;
 import com.example.management.pojo.po.RoleManu;
 import com.example.management.mapper.RoleManuMapper;
+import com.example.management.pojo.ro.RoleManus;
 import com.example.management.service.RoleManuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.management.utils.CommonResult;
@@ -56,10 +57,12 @@ public class RoleManuServiceImpl extends ServiceImpl<RoleManuMapper, RoleManu> i
     }
 
     @Override
-    public CommonResult selectRoleManu(String roleId) {
+    public CommonResult selectRoleManu(Integer roleId) {
         QueryWrapper wrapper = new QueryWrapper();
+        wrapper.select("manuId","manuName");
         wrapper.eq("roleId",roleId);
-        List list = roleManuMapper.selectList(wrapper);
+        wrapper.eq("state",1);
+        List<Manu> list = roleManuMapper.selectManus(roleId,1);
         return CommonResult.success(list);
     }
 
@@ -69,6 +72,32 @@ public class RoleManuServiceImpl extends ServiceImpl<RoleManuMapper, RoleManu> i
         wrapper.eq("roleId",roleManu.getRoleId());
         wrapper.eq("manuId",roleManu.getManuId());
         roleManuMapper.delete(wrapper);
+        return CommonResult.success();
+    }
+
+    @Override
+    public CommonResult setAllRoleManu(RoleManus roleManus) {
+        Integer roleId = roleManus.getRoleId();
+        Integer[] manuId = roleManus.getManuId();
+        Integer[] state = roleManus.getState();
+        for(int i = 0; i < manuId.length; i++){
+            QueryWrapper wrapper = new QueryWrapper();
+            wrapper.eq("roleId",roleId);
+            wrapper.eq("manuId",manuId[i]);
+            if(roleManuMapper.selectCount(wrapper) == 0){
+                if(state[i] == 1){
+                    RoleManu roleManu = new RoleManu(roleId,manuId[i]);
+                    roleManuMapper.insert(roleManu);
+                }
+            }
+            else{
+                if(state[i] == 0){
+                    RoleManu roleManu = roleManuMapper.selectOne(wrapper);
+                    roleManu.setState(0);
+                    roleManuMapper.updateById(roleManu);
+                }
+            }
+        }
         return CommonResult.success();
     }
 }

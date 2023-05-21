@@ -30,6 +30,9 @@ public class Manu implements Serializable {
     @TableField("manuName")
     private String manuName;
 
+    @TableField("sortId")
+    private Integer sortId;
+
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }

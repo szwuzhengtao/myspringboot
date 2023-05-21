@@ -2,11 +2,13 @@ E:\myspringboot\management\src\test\java\com\example\management\RedisTest.java
 E:\myspringboot\management\src\test\java\com\example\management\AuthorityTest.java
 E:\myspringboot\management\src\test\java\com\example\management\CodeGenerator.java
 E:\myspringboot\management\src\test\java\com\example\management\controller\RoleManuControllerTest.java
+E:\myspringboot\management\src\test\java\com\example\management\controller\AnalyzeControllerTest.java
 E:\myspringboot\management\src\test\java\com\example\management\controller\LoginControllerTest.java
 E:\myspringboot\management\src\test\java\com\example\management\controller\ManuControllerTest.java
 E:\myspringboot\management\src\test\java\com\example\management\controller\StaffControllerTest.java
 E:\myspringboot\management\src\test\java\com\example\management\controller\RecordControllerTest.java
 E:\myspringboot\management\src\test\java\com\example\management\mapper\MapperTest.java
+E:\myspringboot\management\src\test\java\com\example\management\controller\BlockControllerTest.java
 E:\myspringboot\management\src\test\java\com\example\management\controller\FollowupControllerTest.java
 E:\myspringboot\management\src\test\java\com\example\management\controller\RoleControllerTest.java
 E:\myspringboot\management\src\test\java\com\example\management\controller\NoticeControllerTest.java

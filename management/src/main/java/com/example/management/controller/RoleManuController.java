@@ -2,6 +2,7 @@ package com.example.management.controller;
 
 
 import com.example.management.pojo.po.RoleManu;
+import com.example.management.pojo.ro.RoleManus;
 import com.example.management.service.RoleManuService;
 import com.example.management.utils.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,20 +26,26 @@ public class RoleManuController {
 
     @PreAuthorize("hasAuthority('设置权限')")
     @PostMapping("/add")
-    public CommonResult setRoleManu(@RequestBody int roleId, int manuId){
-        return roleManuService.setRoleManu(roleId,manuId);
+    public CommonResult setRoleManu(@RequestBody RoleManu roleManu){
+        return roleManuService.setRoleManu(roleManu.getRoleId(),roleManu.getManuId());
     }
 
     @PreAuthorize("hasAuthority('设置权限')")
     @PostMapping("/select")
-    public CommonResult selectRoleManu(@RequestBody String roleId){
-        return roleManuService.selectRoleManu(roleId);
+    public CommonResult selectRoleManu(@RequestBody RoleManu roleManu){
+        return roleManuService.selectRoleManu(roleManu.getRoleId());
     }
 
     @PreAuthorize("hasAuthority('设置权限')")
     @PostMapping("/delete")
     public CommonResult deleteRoleManu(@RequestBody RoleManu roleManu){
         return roleManuService.deleteRoleManu(roleManu);
+    }
+
+    @PreAuthorize("hasAuthority('设置权限')")
+    @PostMapping("/setall")
+    public CommonResult setAllRoleManu(@RequestBody RoleManus roleManus){
+        return roleManuService.setAllRoleManu(roleManus);
     }
 }
 

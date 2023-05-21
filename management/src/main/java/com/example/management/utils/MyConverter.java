@@ -1,11 +1,11 @@
 package com.example.management.utils;
 
-import com.example.management.pojo.po.Customer;
-import com.example.management.pojo.po.Deleted;
-import com.example.management.pojo.po.Log;
-import com.example.management.pojo.po.Staff;
+import com.example.management.pojo.po.*;
+import com.example.management.pojo.vo.SimpleManu;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyConverter {
     private SimpleDateFormat sdf;
@@ -67,5 +67,13 @@ public class MyConverter {
         customer.setNickname(deleted.getNickname());
         customer.setCustomerJointime(sdf.format(System.currentTimeMillis()));
         return customer;
+    }
+
+    public List<SimpleManu> manusToSimpleManus(List<Manu> manus){
+        List<SimpleManu> simpleManus = new ArrayList<>();
+        for(Manu manu : manus){
+            simpleManus.add(new SimpleManu(manu));
+        }
+        return simpleManus;
     }
 }

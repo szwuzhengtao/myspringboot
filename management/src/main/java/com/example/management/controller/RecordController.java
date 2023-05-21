@@ -44,5 +44,11 @@ public class RecordController {
     public CommonResult recordBlock(@RequestBody RecordIds recordIds){
         return recordService.recordBlock(recordIds);
     }
+
+    @PreAuthorize("hasAuthority('查找聊天记录')")
+    @PostMapping("/key")
+    public CommonResult keyWords(String personId){
+        return recordService.keyWords(personId);
+    }
 }
 
