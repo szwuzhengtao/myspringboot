@@ -154,5 +154,6 @@
     <orderEntry type="library" name="Maven: org.hdrhistogram:HdrHistogram:2.1.12" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.latencyutils:LatencyUtils:2.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.huaban:jieba-analysis:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.hankcs:hanlp:portable-1.7.6" level="project" />
   </component>
 </module>

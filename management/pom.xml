@@ -168,6 +168,12 @@
             <version>1.0.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.hankcs</groupId>
+            <artifactId>hanlp</artifactId>
+            <version>portable-1.7.6</version>
+        </dependency>
+
     </dependencies>
 
     <build>

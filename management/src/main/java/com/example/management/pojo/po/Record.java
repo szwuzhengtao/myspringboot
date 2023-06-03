@@ -24,7 +24,7 @@ public class Record implements Serializable {
     private String time;
 
     @TableField("chatId")
-    private Integer chatId;
+    private String chatId;
 
     @TableField("chatName")
     private String chatName;
@@ -59,11 +59,11 @@ public class Record implements Serializable {
         this.time = time;
     }
 
-    public Integer getChatId() {
+    public String getChatId() {
         return chatId;
     }
 
-    public void setChatId(Integer chatId) {
+    public void setChatId(String chatId) {
         this.chatId = chatId;
     }
 

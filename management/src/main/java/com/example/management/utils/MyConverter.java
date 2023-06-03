@@ -1,14 +1,23 @@
 package com.example.management.utils;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.management.mapper.MemberMapper;
 import com.example.management.pojo.po.*;
+import com.example.management.pojo.vo.RecordDetails;
 import com.example.management.pojo.vo.SimpleManu;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class MyConverter {
     private SimpleDateFormat sdf;
+
+    @Autowired(required = false)
+    private MemberMapper memberMapper;
 
     public MyConverter(){
         sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -75,5 +84,40 @@ public class MyConverter {
             simpleManus.add(new SimpleManu(manu));
         }
         return simpleManus;
+    }
+
+    public List<RecordDetails> recordCollection(List<Record> records){
+        List<RecordDetails> recordDetails = new ArrayList<>();
+        for(Record record : records){
+            QueryWrapper wrapper = new QueryWrapper();
+            wrapper.eq("memberQQ",record.getPersonId());
+            Member member = memberMapper.selectOne(wrapper);
+            RecordDetails recordDetail = new RecordDetails();
+            recordDetail.setRecordId(record.getRecordId());
+            recordDetail.setPersonId(record.getPersonId());
+            recordDetail.setNickname(member.getNickname());
+            recordDetail.setAvatarURL(member.getAvatarURL());
+            recordDetail.setContent(record.getContent());
+            recordDetail.setChatId(record.getChatId());
+            recordDetail.setChatName(record.getChatName());
+            recordDetail.setIsCustomer(member.getIsCustomer());
+            recordDetail.setTime(record.getTime());
+            recordDetails.add(recordDetail);
+        }
+        return recordDetails;
+    }
+
+    public RecordDetails recordPlusMember(Record record, Member member){
+        RecordDetails recordDetail = new RecordDetails();
+        recordDetail.setRecordId(record.getRecordId());
+        recordDetail.setPersonId(record.getPersonId());
+        recordDetail.setNickname(member.getNickname());
+        recordDetail.setAvatarURL(member.getAvatarURL());
+        recordDetail.setContent(record.getContent());
+        recordDetail.setChatId(record.getChatId());
+        recordDetail.setChatName(record.getChatName());
+        recordDetail.setIsCustomer(member.getIsCustomer());
+        recordDetail.setTime(record.getTime());
+        return recordDetail;
     }
 }

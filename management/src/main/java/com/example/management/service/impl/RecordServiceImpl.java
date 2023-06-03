@@ -1,18 +1,15 @@
 package com.example.management.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.example.management.mapper.BlockingwordsMapper;
+import com.example.management.mapper.*;
 import com.example.management.pojo.po.Blockingwords;
+import com.example.management.pojo.po.Member;
 import com.example.management.pojo.ro.RecordIds;
-import com.example.management.mapper.BlockMapper;
-import com.example.management.mapper.RecordblockMapper;
 import com.example.management.pojo.po.Record;
-import com.example.management.mapper.RecordMapper;
+import com.example.management.pojo.vo.RecordDetails;
 import com.example.management.service.RecordService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.management.utils.CommonResult;
-import com.example.management.utils.JiebaUtils;
-import com.example.management.utils.RedisCache;
+import com.example.management.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,29 +30,71 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
     @Autowired(required = false)
     private BlockingwordsMapper blockingwordsMapper;
 
+    @Autowired(required = false)
+    private MemberMapper memberMapper;
+
     @Autowired
     private RedisCache redisCache;
 
     @Override
     public CommonResult selectAll() {
         List<Record> records = recordMapper.selectList(null);
-        return CommonResult.success(records);
+        List<RecordDetails> recordDetails = new ArrayList<>();
+        MyConverter converter = new MyConverter();
+        for(Record record : records){
+            QueryWrapper wrapper1 = new QueryWrapper();
+            wrapper1.eq("memberQQ",record.getPersonId());
+            if(memberMapper.selectCount(wrapper1) > 0){
+                Member member = memberMapper.selectOne(wrapper1);
+                RecordDetails recordDetail = converter.recordPlusMember(record,member);
+                recordDetails.add(recordDetail);
+            }
+        }
+//        MyConverter converter = new MyConverter();
+//        List<RecordDetails> recordDetails = converter.recordCollection(list);
+        return CommonResult.success(recordDetails);
     }
 
     @Override
-    public CommonResult selectById(int customerId) {
+    public CommonResult selectById(String customerId) {
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("personId",customerId);
-        List list = recordMapper.selectList(wrapper);
-        return CommonResult.success(list);
+        List<Record> list = recordMapper.selectList(wrapper);
+        List<RecordDetails> recordDetails = new ArrayList<>();
+        MyConverter converter = new MyConverter();
+        for(Record record : list){
+            QueryWrapper wrapper1 = new QueryWrapper();
+            wrapper1.eq("memberQQ",record.getPersonId());
+            if(memberMapper.selectCount(wrapper1) > 0){
+                Member member = memberMapper.selectOne(wrapper1);
+                RecordDetails recordDetail = converter.recordPlusMember(record,member);
+                recordDetails.add(recordDetail);
+            }
+        }
+//        MyConverter converter = new MyConverter();
+//        List<RecordDetails> recordDetails = converter.recordCollection(list);
+        return CommonResult.success(recordDetails);
     }
 
     @Override
     public CommonResult selectByChatId(int chatId) {
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("chatId",chatId);
-        List list = recordMapper.selectList(wrapper);
-        return CommonResult.success(list);
+        List<Record> list = recordMapper.selectList(wrapper);
+        List<RecordDetails> recordDetails = new ArrayList<>();
+        MyConverter converter = new MyConverter();
+        for(Record record : list){
+            QueryWrapper wrapper1 = new QueryWrapper();
+            wrapper1.eq("memberQQ",record.getPersonId());
+            if(memberMapper.selectCount(wrapper1) > 0){
+                Member member = memberMapper.selectOne(wrapper1);
+                RecordDetails recordDetail = converter.recordPlusMember(record,member);
+                recordDetails.add(recordDetail);
+            }
+        }
+//        MyConverter converter = new MyConverter();
+//        List<RecordDetails> recordDetails = converter.recordCollection(list);
+        return CommonResult.success(recordDetails);
     }
 
     @Override
@@ -63,8 +102,21 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.eq("chatId",chatId);
         wrapper.like("content",key);
-        List list = recordMapper.selectList(wrapper);
-        return CommonResult.success(list);
+        List<Record> list = recordMapper.selectList(wrapper);
+        List<RecordDetails> recordDetails = new ArrayList<>();
+        MyConverter converter = new MyConverter();
+        for(Record record : list){
+            QueryWrapper wrapper1 = new QueryWrapper();
+            wrapper1.eq("memberQQ",record.getPersonId());
+            if(memberMapper.selectCount(wrapper1) > 0){
+                Member member = memberMapper.selectOne(wrapper1);
+                RecordDetails recordDetail = converter.recordPlusMember(record,member);
+                recordDetails.add(recordDetail);
+            }
+        }
+//        MyConverter converter = new MyConverter();
+//        List<RecordDetails> recordDetails = converter.recordCollection(list);
+        return CommonResult.success(recordDetails);
     }
 
     @Override
@@ -104,5 +156,20 @@ public class RecordServiceImpl extends ServiceImpl<RecordMapper, Record> impleme
             return CommonResult.success(pq);
         }
         return CommonResult.success();
+    }
+
+    @Override
+    public CommonResult emotionAnalyze(String personId) {
+        QueryWrapper wrapper = new QueryWrapper();
+        wrapper.eq("personId",personId);
+        List<Record> list = recordMapper.selectList(wrapper);
+        HanLpClassifier.initClassifier(ClassifierConstant.DATASET_HOTEL_PATH, ClassifierConstant.HOTEL_MODEL_PATH);
+        Map<String,Integer> map = new HashMap<>();
+        for(Record record : list){
+            String emotion = HanLpClassifier.getClassification(record.getContent());
+            Integer count = map.get(emotion);
+            map.put(emotion,(count == null) ? 1 : count + 1);
+        }
+        return CommonResult.success(map);
     }
 }

@@ -9,7 +9,7 @@ public interface RecordService extends IService<Record> {
 
     CommonResult selectAll();
 
-    CommonResult selectById(int customerId);
+    CommonResult selectById(String customerId);
 
     CommonResult selectByChatId(int chatId);
 
@@ -18,4 +18,6 @@ public interface RecordService extends IService<Record> {
     CommonResult recordBlock(RecordIds recordIds);
 
     CommonResult keyWords(String personId);
+
+    CommonResult emotionAnalyze(String personId);
 }

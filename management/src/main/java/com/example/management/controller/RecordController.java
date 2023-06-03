@@ -23,7 +23,7 @@ public class RecordController {
 
     @PreAuthorize("hasAnyAuthority('查找聊天记录')")
     @PostMapping("/select/customer")
-    public CommonResult selectById(@RequestBody int personId){
+    public CommonResult selectById(String personId){
         return recordService.selectById(personId);
     }
 
@@ -49,6 +49,12 @@ public class RecordController {
     @PostMapping("/key")
     public CommonResult keyWords(String personId){
         return recordService.keyWords(personId);
+    }
+
+    @PreAuthorize("hasAuthority('查找聊天记录')")
+    @PostMapping("/emotion")
+    public CommonResult emotionAnalyze(String personId){
+        return recordService.emotionAnalyze(personId);
     }
 }
 
