@@ -22,14 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d048aaf2-ef1e-4536-9477-987d50e79bd3" name="默认的" comment="解决了ChatController的NPL异常，原因是selectAll方法为私有导致spring无法调用">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/mapper/ChatMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/mapper/ChatMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/mapper/RecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/mapper/RecordMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/pojo/po/Chat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/ChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/service/impl/ChatServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/management/utils/MyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/management/utils/MyConverter.java" afterDir="false" />
-    </list>
+    <list default="true" id="d048aaf2-ef1e-4536-9477-987d50e79bd3" name="默认的" comment="解决了ChatController的NPL异常，原因是selectAll方法为私有导致spring无法调用" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -302,6 +295,7 @@
       <workItem from="1685679615161" duration="4706000" />
       <workItem from="1685764962412" duration="2755000" />
       <workItem from="1685811438028" duration="2500000" />
+      <workItem from="1685846490676" duration="344000" />
     </task>
     <servers />
   </component>

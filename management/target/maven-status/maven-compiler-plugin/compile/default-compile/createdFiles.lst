@@ -87,6 +87,7 @@ com\example\management\controller\FollowupController.class
 com\example\management\utils\JwtUtil.class
 com\example\management\pojo\po\Manusort.class
 com\example\management\controller\RoleController.class
+com\example\management\pojo\vo\ChatShow.class
 com\example\management\pojo\po\Record.class
 com\example\management\controller\NoticeController.class
 com\example\management\pojo\po\Department.class

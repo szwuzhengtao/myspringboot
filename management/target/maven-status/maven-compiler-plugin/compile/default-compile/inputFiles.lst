@@ -107,6 +107,7 @@ E:\myspringboot\management\src\main\java\com\example\management\service\impl\Log
 E:\myspringboot\management\src\main\java\com\example\management\mapper\RecordblockMapper.java
 E:\myspringboot\management\src\main\java\com\example\management\pojo\po\Record.java
 E:\myspringboot\management\src\main\java\com\example\management\controller\HelloController.java
+E:\myspringboot\management\src\main\java\com\example\management\pojo\vo\ChatShow.java
 E:\myspringboot\management\src\main\java\com\example\management\service\LogService.java
 E:\myspringboot\management\src\main\java\com\example\management\mapper\BlockingwordsMapper.java
 E:\myspringboot\management\src\main\java\com\example\management\pojo\ro\RoleManus.java
