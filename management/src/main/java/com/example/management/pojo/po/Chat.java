@@ -17,10 +17,17 @@ public class Chat implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @TableField("chatId")
-    private Integer chatId;
+    private String chatId;
 
     @TableField("chatName")
     private String chatName;
 
+    @TableField("number")
+    private Integer number;
 
+    @TableField("buildTime")
+    private String buildTime;
+
+    @TableField("degree")
+    private String degree;
 }

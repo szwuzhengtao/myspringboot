@@ -3,6 +3,7 @@ package com.example.management.utils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.management.mapper.MemberMapper;
 import com.example.management.pojo.po.*;
+import com.example.management.pojo.vo.ChatShow;
 import com.example.management.pojo.vo.RecordDetails;
 import com.example.management.pojo.vo.SimpleManu;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -119,5 +120,16 @@ public class MyConverter {
         recordDetail.setIsCustomer(member.getIsCustomer());
         recordDetail.setTime(record.getTime());
         return recordDetail;
+    }
+
+    public ChatShow showChat(Chat chat,Record record){
+        ChatShow chatShow = new ChatShow();
+        chatShow.setChatId(chat.getChatId());
+        chatShow.setChatName(chat.getChatName());
+        chatShow.setNumber(chat.getNumber());
+        chatShow.setBuildTime(chat.getBuildTime());
+        chatShow.setDegree(chat.getDegree());
+        chatShow.setRecent(record.getContent());
+        return chatShow;
     }
 }
